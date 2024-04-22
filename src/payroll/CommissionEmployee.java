@@ -3,7 +3,7 @@ package payroll;
 public class CommissionEmployee extends Employee {
    private double grossSale; // gross weekly sales
    private double commissionRate; // commission percentage
-
+   private Employee employee;
    // five-argument constructor
    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSale, double commissionRate) {
       // implicit call to Object constructor occurs here
@@ -61,11 +61,11 @@ public class CommissionEmployee extends Employee {
    } 
 
    // return String representation of CommissionEmployee object
+   // return String representation of CommissionEmployee object
    @Override 
    public String toString() {
-      return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f", 
-         "Commission employee's name:", getFirstName(), getLastName(), 
-         "Employee's social security number:", getSocialSecurityNumber(), 
+      return String.format("%n%s%n%s: %.2f%n%s: %.2f", 
+         employee.toString(),
          "Gross sales:", getGrossSale(), 
          "Commission rate:", getCommissionRate());
    } 

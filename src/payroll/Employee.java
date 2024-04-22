@@ -9,17 +9,10 @@ public class Employee {
         this.lastName = lastName;
         this.socialSecurityNumber = socialSecurityNumber;
 
-    }
-    public void setFirstname() {
-        this.firstName = firstName;
-    }
+        if (socialSecurityNumber.length() != 11 || socialSecurityNumber.charAt(3) != '-' || socialSecurityNumber.charAt(6) !='-') {
+            throw new IllegalArgumentException("Invalid fromat entered for Social security number ");
+        }
 
-    public void setLastname() {
-        this.lastName = lastName;
-    }
-
-    public void setSocialSecurityNUmber() {
-        this.socialSecurityNumber = socialSecurityNumber;
     }
     
     public String getFirstName() {
@@ -36,8 +29,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return  String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f", 
-        "Employee's name", getFirstName(), getLastName(), 
+        return  String.format("%s: %s %s%n%s: %s:",
+        "Employee's name", getFirstName(), getLastName(),
         "Employee's social security number", getSocialSecurityNumber());
     }
 
