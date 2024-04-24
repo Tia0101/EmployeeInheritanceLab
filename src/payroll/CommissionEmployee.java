@@ -5,6 +5,7 @@
 // Purpose: Subclass to the Employee super class, Class used to calculate commission from sales for commission only employee's
 // Citation: This program references chapter 9 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com and youtube
 
+//Custom package made
 package payroll;
 
 public class CommissionEmployee extends Employee {

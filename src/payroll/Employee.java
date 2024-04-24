@@ -5,7 +5,7 @@
 // Purpose: Superclass for CommissionEmployee 
 // Citation: This program references chapter 9 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com and youtube
 
-//Class was made into a package for payroll
+//Custom package created for payroll
 package payroll;
 public class Employee {
     private String firstName;

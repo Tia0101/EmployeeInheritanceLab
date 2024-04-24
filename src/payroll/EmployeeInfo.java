@@ -5,6 +5,7 @@
 // Purpose:"Utility" Class created to collect user input and store in an arraylist to return for parameters.
 // Citation:This program references chapter 7 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com, baeldung.com and youtube
 
+//See this whole, checked with you to make sure this was extra credit.
 package payroll;
 import java.util.ArrayList;
 import java.util.Scanner;

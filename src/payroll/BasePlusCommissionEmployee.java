@@ -16,8 +16,8 @@ public class BasePlusCommissionEmployee extends CommissionEmployee  {
    // six-argument constructor
    public BasePlusCommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSale, double commissionRate, double basePay) {
          
-      //Call to CommissionEmploy super class contstructor
-         super(firstName, lastName, socialSecurityNumber, grossSale, commissionRate);
+      //Call to CommissionEmployee super class contstructor
+      super(firstName, lastName, socialSecurityNumber, grossSale, commissionRate);
          
       if (basePay < 0.0) {
          throw new IllegalArgumentException(
@@ -45,7 +45,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee  {
    // calculate base-salaried commission employee's earnings
    public double earnings() {
       return getBasePay() + commissionEmployee.earnings();
-   } 
+   }
 
    // return String representation of BasePlusCommissionEmployee
    @Override
