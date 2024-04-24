@@ -1,3 +1,10 @@
+// Name: Tia Vanderyacht
+//Date: 04/18/2024
+// Class: CS 145 9:30am face to face
+// Assignment: Lab 3 Employee inheritance.
+// Purpose: Subclass to the Employee super class, Class used to calculate commission from sales for commission only employee's
+// Citation: This program references chapter 9 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com and youtube
+
 package payroll;
 
 public class CommissionEmployee extends Employee {
@@ -6,8 +13,8 @@ public class CommissionEmployee extends Employee {
    private Employee employee;
    // five-argument constructor
    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSale, double commissionRate) {
-      // implicit call to Object constructor occurs here
-
+      
+      //Call to Employee super class constructor
       super(firstName, lastName, socialSecurityNumber);
 
       // if grossSales is invalid throw exception
@@ -60,7 +67,7 @@ public class CommissionEmployee extends Employee {
       return getCommissionRate() * getGrossSale();
    } 
 
-   // return String representation of CommissionEmployee object
+  
    // return String representation of CommissionEmployee object
    @Override 
    public String toString() {

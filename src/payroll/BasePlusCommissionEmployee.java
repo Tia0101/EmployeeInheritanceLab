@@ -1,3 +1,11 @@
+// Name: Tia Vanderyacht
+//Date: 04/18/2024
+// Class: CS 145 9:30am face to face
+// Assignment: Lab 3 Employee inheritance.
+// Purpose: Subclass to CommissionEmployee Class, Class is used to calculate earnings for a base employee plus commission
+// Citation: This program references chapter 9 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com and youtube
+
+//Custom package made
 package payroll;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee  {
@@ -7,7 +15,8 @@ public class BasePlusCommissionEmployee extends CommissionEmployee  {
 
    // six-argument constructor
    public BasePlusCommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSale, double commissionRate, double basePay) {
-      
+         
+      //Call to CommissionEmploy super class contstructor
          super(firstName, lastName, socialSecurityNumber, grossSale, commissionRate);
          
       if (basePay < 0.0) {

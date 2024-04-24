@@ -6,10 +6,12 @@
 //and show the output using getter(Accessor)methods of the BasePlusCommissionEmployee subclass.
 // Citation: This program references chapter 9 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com and youtube
 
-//Imports Arraylist for Employee info class
+//See line 23 Arraylist created for extra credit
+
+//Imports Arraylist so arraylist methods can be used.
 import java.util.ArrayList;
 
-//Import for Payroll custom package.
+//Imports for Payroll custom package.
 import payroll.BasePlusCommissionEmployee;
 import payroll.EmployeeInfo;
 
@@ -18,7 +20,8 @@ public class BasePlusCommissionEmployeeTestApp {
 
     public static void main(String[] args) {
         
-        ArrayList<Object> employeeInfo = EmployeeInfo.getEmployeeInfo();//ArrayList object created from EmployeeInfo created for user input
+        ArrayList<Object> employeeInfo = EmployeeInfo.collectEmployeeInfo();// EmployeeInfo class arraylist object created
+
         //Parsing out variables from user input from the array list return so they can be used as the parameters
         String firstName = (String) employeeInfo.get(0);
         String lastName = (String) employeeInfo.get(1);

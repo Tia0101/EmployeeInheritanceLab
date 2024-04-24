@@ -1,14 +1,18 @@
+// Name: Tia Vanderyacht
+//Date: 04/18/2024
+// Class: CS 145 9:30am face to face
+// Assignment: Lab 3 Employee inheritance.
+// Purpose:"Utility" Class created to collect user input and store in an arraylist to return for parameters.
+// Citation:This program references chapter 7 of the Deitel/Deitel-11th edition(Early Objects), w3schools.com, StackOverFlow.com, baeldung.com and youtube
+
 package payroll;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class EmployeeInfo {
-    private ArrayList<Object> employeeInfoList;
 
-    public EmployeeInfo (ArrayList<Object> employeeInfoList) {
-        this.employeeInfoList = employeeInfoList;
-    }
-
-    public static ArrayList<Object> getEmployeeInfo() {
+public final class EmployeeInfo {
+    private EmployeeInfo()  { }// private constructor so one is not created by default
+    //Method that prompts for user input and stores the data in an arraylist. This method returns the arraylist.
+    public static ArrayList<Object> collectEmployeeInfo() {
         Scanner input = new Scanner(System.in);
         ArrayList<Object> employeeInfoList = new ArrayList<>();
 
@@ -33,7 +37,8 @@ public class EmployeeInfo {
         System.out.println("Please enter employee's base salary");
         double basePay = input.nextDouble();
         System.out.println();
-
+        
+        //Adding the user input to the arraylist
         employeeInfoList.add(firstName);
         employeeInfoList.add(lastName);
         employeeInfoList.add(socialNum);
